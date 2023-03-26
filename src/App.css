@@ -9,4 +9,8 @@
   .card, .new-form{
     width: 30rem;
   }
+  .new-form{
+    display: flex;
+    flex-direction: column;
+  }
 }
