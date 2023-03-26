@@ -1,15 +1,12 @@
-.App {
-  text-align: center;
-}
-
-.card{
+.card, .new-form{
   width: 18rem;
   margin: auto;
   margin-top: 8rem; 
 }
 
+
 @media (min-width: 500px) {
-  .card{
+  .card, .new-form{
     width: 30rem;
   }
 }
