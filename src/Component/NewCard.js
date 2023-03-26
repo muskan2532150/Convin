@@ -1,7 +1,7 @@
 import React,{ useState } from "react"
 
 const NewCard = () => {
-    const [inputs, setInputs] = useState({email:'', password:'', video:''});
+    const [inputs, setInputs] = useState({name:'', url:'', video:''});
 
    const inputHandler = (e) => {
    console.log(e.target.name, e.target.value)
@@ -15,13 +15,13 @@ console.log(inputs);
     return (
         <form className='new-form'>
             <div className="mb-3">
-                <input type="email" name="email" className="form-control form-control-lg" onChange={inputHandler} 
-                value={inputs.email} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Email address' />
-                <div id="emailHelp" className="form-text text-white">We'll never share your email with anyone else.</div>
+                <input type="name" name="name" className="form-control form-control-lg" onChange={inputHandler} 
+                value={inputs.name} id="exampleInputEmail1" aria-describedby="nameHelp" placeholder='Name' required />
             </div>
             <div className="mb-3">
-                <input type="password" name="password" className="form-control form-control-lg" id="exampleInputPassword1" 
-                onChange={inputHandler} placeholder='Password' value={inputs.password} />
+                <input type="url" name="url" className="form-control form-control-lg" id="exampleInputPassword1" 
+                onChange={inputHandler} placeholder='https://example.com' value={inputs.url} pattern="https://.*" size="30"
+                required />
             </div>
             <select className="form-select-lg mb-3" aria-label="Default select example"
             name="video" onChange={inputHandler} value={inputs.video}>
