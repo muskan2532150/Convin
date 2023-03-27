@@ -59,10 +59,10 @@ const NewCard = () => {
         value={inputs.video}
       >
         <option defaultValue="Entertainment Videos">Open this select menu</option>
-        <option value="Education Videos">Education Videos</option>
-        <option value="Finance Videos">Finance Videos</option>
-        <option value="Entertainment Videos">Entertainment Videos, </option>
-        <option value="Devotional Videos">Devotional Videos</option>
+        <option value="Education">Education Videos</option>
+        <option value="Finance">Finance Videos</option>
+        <option value="Entertainment">Entertainment Videos, </option>
+        <option value="Devotional">Devotional Videos</option>
       </select>
       <button type="submit" className="btn btn-primary" onClick={submitHandler}>Submit</button>
     </form>

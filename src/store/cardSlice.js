@@ -15,6 +15,7 @@ const CardSlice = createSlice({
   name: 'card',
   initialState,
   reducers: {
+    setdata: (state, action) => action.payload,
     appenddata: (state, action) => [
       ...state, action.payload,
     ],
@@ -32,6 +33,6 @@ const CardSlice = createSlice({
   },
 });
 
-export const { appenddata, filterdata } = CardSlice.actions;
+export const { setdata, appenddata, filterdata } = CardSlice.actions;
 
 export default CardSlice.reducer;

@@ -28,6 +28,10 @@ iframe {
   margin-top: 8rem;
 }
 
+.custommodal{
+  margin-top: 6rem;
+}
+
 @media (min-width: 500px) {
   .card,
   .new-form {

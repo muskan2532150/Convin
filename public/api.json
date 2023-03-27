@@ -3,30 +3,30 @@
         "id":1,
         "name": "Person1",
         "url": "https://www.youtube.com/embed/uXWycyeTeCs",
-        "video": "Education video"
+        "video": "Education"
     },
     {
         "id":2,
         "name": "Person2",
         "url": "https://www.youtube.com/embed/-mJFZp84TIY",
-        "video": "Education video"
+        "video": "Education"
     },
     {
         "id":3,
         "name": "Person3",
         "url": "https://www.youtube.com/embed/e-ORhEE9VVg",
-        "video": "Entertainment video"
+        "video": "Entertainment"
     },
     {
         "id":4,
         "name": "Person4",
         "url": "https://www.youtube.com/embed/_tmZ1vypC0c",
-        "video": "Devotional video"
+        "video": "Devotional"
     },
     {
         "id":5,
         "name": "Person5",
         "url": "https://www.youtube.com/embed/WN9Mks1s4tM",
-        "video": "Finance  video"
+        "video": "Finance"
     }
 ]

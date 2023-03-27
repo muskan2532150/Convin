@@ -19,7 +19,11 @@ const Card = () => {
               {' '}
               {card.name}
             </h5>
-            <h6 className="card-subtitle mb-2 text-body-secondary">{card.video}</h6>
+            <h6 className="card-subtitle mb-2 text-body-secondary">
+              {card.video}
+              {' '}
+              video
+            </h6>
             <button
               type="button"
               className="btn btn-primary"
@@ -28,7 +32,7 @@ const Card = () => {
             >
               See More
             </button>
-            <div className="modal fade" id={card.id} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal fade custommodal" id={card.id} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div className="modal-dialog">
                 <div className="modal-content">
                   <div className="modal-header">
