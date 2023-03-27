@@ -6,6 +6,11 @@
   z-index: 1;
 }
 
+iframe{
+  width: 100%;
+  height: 35vh;
+}
+
 .card,
 .new-form {
   width: 18rem;

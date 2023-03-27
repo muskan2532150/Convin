@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
-import { useDispatch,useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { appenddata } from '../store/cardSlice';
 
 const NewCard = () => {
   const cards = useSelector((state) => state.card);
-  const [inputs, setInputs] = useState({id: 0, name: '', url: '', video: '' });
+  const [inputs, setInputs] = useState({
+    id: 0, name: '', url: '', video: '',
+  });
   const dispatch = useDispatch();
 
   const inputHandler = (e) => {
     setInputs({
       ...inputs,
-      id:cards.length+1,
+      id: cards.length + 1,
       [e.target.name]: e.target.value,
     });
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(inputs)
     dispatch(appenddata(inputs));
   };
 
