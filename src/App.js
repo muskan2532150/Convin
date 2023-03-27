@@ -1,15 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './Component/Navbar';
 import Card from './Component/Card';
 import NewCard from './Component/NewCard';
-import { store } from './store/store'
-import { Provider } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { CardThunk } from './store/cardSlice';
+import { useEffect } from 'react';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+          dispatch(CardThunk());
+  }, []);
   return (
-    <Provider store={store}>
      <Router>
      <Navbar/>
       <Routes>
@@ -18,7 +22,6 @@ function App() {
         <Route path="/newcard" element={<NewCard/>} />
       </Routes>
      </Router>
-    </Provider>
   );
 }
 
