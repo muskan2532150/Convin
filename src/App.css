@@ -1,9 +1,13 @@
+.navbar{
+  margin-bottom: 3rem;
+}
+
 .card, .new-form{
   width: 18rem;
   margin: auto;
-  margin-top: 8rem; 
+  margin-top: 3rem; 
+  margin-bottom: 2rem;
 }
-
 
 @media (min-width: 500px) {
   .card, .new-form{
