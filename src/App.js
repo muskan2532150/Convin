@@ -12,6 +12,7 @@ function App() {
 
   useEffect(() => {
     dispatch(CardThunk());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <Router>
