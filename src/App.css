@@ -3,6 +3,7 @@
   top: 0;
   width: 100%;
   margin-bottom: 3rem;
+  z-index: 1;
 }
 
 .card,
@@ -11,6 +12,10 @@
   margin: auto;
   margin-top: 3rem;
   margin-bottom: 2rem;
+}
+
+.card {
+  padding: 3%;
 }
 
 .card:nth-child(2),

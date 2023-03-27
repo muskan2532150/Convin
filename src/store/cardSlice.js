@@ -19,11 +19,15 @@ const CardSlice = createSlice({
       ...state, action.payload,
     ],
 
-    filterdata: (state, action) => {
-      state.filter((item) => item === action.payload);
-      return [
-        ...state, action.payload,
-      ];
+    filterdata: (state, action) => state.filter((item) => item.id !== action.payload),
+
+    editdata: (state, action) => {
+      state = state.map((item)=> {
+        if(item.id === action.payload)
+        {
+          
+        }
+      })
     },
   },
   extraReducers: (builder) => {
