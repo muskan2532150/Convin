@@ -1,15 +1,22 @@
 import React,{ useState } from "react"
+import { useDispatch } from "react-redux";
+import {appenddata} from '../store/cardSlice'
 
 const NewCard = () => {
-    const [inputs, setInputs] = useState({name:'', url:'', video:''});
+    const [inputs, setInputs] = useState({name:"", url:"", video:""});
+   const dispatch = useDispatch();
 
    const inputHandler = (e) => {
-   console.log(e.target.name, e.target.value)
    setInputs({
     ...inputs,
     [e.target.name] : e.target.value
 })
-console.log(inputs);
+   }
+
+   const submitHandler = (e) => {
+    e.preventDefault();
+    console.log(inputs);
+    dispatch(appenddata(inputs));
    }
   
     return (
@@ -31,7 +38,7 @@ console.log(inputs);
                 <option value="Entertainment Videos">Entertainment Videos, </option>
                 <option value="Devotional Videos">Devotional Videos</option>
             </select>
-            <button type="submit" className="btn btn-primary">Submit</button>
+            <button type="submit" className="btn btn-primary" onClick={submitHandler}>Submit</button>
         </form>
     )
 }
