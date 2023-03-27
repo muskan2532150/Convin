@@ -12,30 +12,30 @@ export const CardThunk = createAsyncThunk(CardRequestMethod, async () => {
 });
 
 const CardSlice = createSlice({
-    name: 'card',
-    initialState,
-    reducers: {
-      appenddata: (state, action) => [
+  name: 'card',
+  initialState,
+  reducers: {
+    appenddata: (state, action) => [
+      ...state, action.payload,
+    ],
+
+    filterdata: (state, action) => {
+      state.filter((item) => item === action.payload);
+      return [
         ...state, action.payload,
-      ],
-  
-      filterdata: (state, action) => {
-        state.filter((item) => item === action.payload);
-        return [
-          ...state, action.payload,
-        ];
-      },
+      ];
     },
-    extraReducers: (builder) => {
-      builder.addCase(CardThunk.fulfilled, (state, action) => {
-        const { payload } = action;
-        return [
-          ...payload,
-        ];
-      });
-    },
-  });
+  },
+  extraReducers: (builder) => {
+    builder.addCase(CardThunk.fulfilled, (state, action) => {
+      const { payload } = action;
+      return [
+        ...payload,
+      ];
+    });
+  },
+});
 
-  export const { appenddata, filterdata } = CardSlice.actions;
+export const { appenddata, filterdata } = CardSlice.actions;
 
-  export default CardSlice.reducer;
+export default CardSlice.reducer;
