@@ -1,18 +1,18 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const CardApiUrl = '/api.json';
+const PostApiUrl = '/api.json';
 
-const CardRequestMethod = '/get/cards';
+const PostRequestMethod = '/get/posts';
 
 const initialState = [];
 
-export const CardThunk = createAsyncThunk(CardRequestMethod, async () => {
-  const cardData = await (await (fetch(CardApiUrl))).json();
-  return cardData;
+export const PostThunk = createAsyncThunk(PostRequestMethod, async () => {
+  const PostData = await (await (fetch(PostApiUrl))).json();
+  return PostData;
 });
 
-const CardSlice = createSlice({
-  name: 'card',
+const PostSlice = createSlice({
+  name: 'Post',
   initialState,
   reducers: {
     setdata: (state, action) => action.payload,
@@ -24,7 +24,7 @@ const CardSlice = createSlice({
 
   },
   extraReducers: (builder) => {
-    builder.addCase(CardThunk.fulfilled, (state, action) => {
+    builder.addCase(PostThunk.fulfilled, (state, action) => {
       const { payload } = action;
       return [
         ...payload,
@@ -33,6 +33,6 @@ const CardSlice = createSlice({
   },
 });
 
-export const { setdata, appenddata, filterdata } = CardSlice.actions;
+export const { setdata, appenddata, filterdata } = PostSlice.actions;
 
-export default CardSlice.reducer;
+export default PostSlice.reducer;
