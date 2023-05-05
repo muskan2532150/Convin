@@ -20,7 +20,7 @@ const PostSlice = createSlice({
       ...state, action.payload,
     ],
 
-    filterdata: (state, action) => state.filter((item) => item.id !== action.payload),
+    filterdata: (state, action) => state.filter((item) => item.type !== action.payload),
 
   },
   extraReducers: (builder) => {

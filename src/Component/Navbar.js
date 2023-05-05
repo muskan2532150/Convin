@@ -35,10 +35,13 @@ const Navbar = () => {
             <button className="btn btn-outline-success" type="submit" onClick={searchHandler}>Search</button>
           </form>
         </div>
-        <button type="button" className="btn">
+        <p>
           create account.
-          <span>It's free!</span>
-        </button>
+          <span><button type="button" className="btn text-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Its free!
+</button>
+</span>
+        </p>
       </div>
     </nav>
   );
