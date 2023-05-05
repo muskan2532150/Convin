@@ -1,10 +1,13 @@
 .post {
   width: 18rem;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin: 3rem 0 2rem 4rem;
   background: #FFFFFF;
   border: 1px solid #E0E0E0;
   border-radius: 4px;
+}
+
+.post:first-child{
+  margin-top: 7rem;
 }
 
 .post-body {

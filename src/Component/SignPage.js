@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../assets/SignPage.css'
+import '../assets/SignPage.css';
+
 const SignPage = () => {
   const [inputs, setInputs] = useState({
     fname: '', lname: '', password: '', email: '', cpassword: '',
@@ -8,14 +9,12 @@ const SignPage = () => {
   const inputHandler = (e) => {
     setInputs({
       ...inputs,
-      id: cards.length + 1,
       [e.target.name]: e.target.value,
     });
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(appenddata(inputs));
   };
 
   return (
@@ -32,71 +31,71 @@ const SignPage = () => {
               <form className="new-form">
                 <div className="mb-3">
                   <input
-                      type="name"
-                      name="fname"
-                      className="form-control form-control-lg"
-                      onChange={inputHandler}
-                      value={inputs.fname}
-                      id="fname"
-                      aria-describedby="nameHelp"
-                      placeholder="First Name"
-                      required
-                    />
+                    type="name"
+                    name="fname"
+                    className="form-control form-control-lg"
+                    onChange={inputHandler}
+                    value={inputs.fname}
+                    id="fname"
+                    aria-describedby="nameHelp"
+                    placeholder="First Name"
+                    required
+                  />
                 </div>
                 <div className="mb-3">
                   <input
-                      type="name"
-                      name="lname"
-                      className="form-control form-control-lg"
-                      onChange={inputHandler}
-                      value={inputs.lname}
-                      id="lname"
-                      aria-describedby="nameHelp"
-                      placeholder="Last Name"
-                      required
-                    />
+                    type="name"
+                    name="lname"
+                    className="form-control form-control-lg"
+                    onChange={inputHandler}
+                    value={inputs.lname}
+                    id="lname"
+                    aria-describedby="nameHelp"
+                    placeholder="Last Name"
+                    required
+                  />
                 </div>
                 <div className="mb-3">
                   <input
-                      type="email"
-                      name="email"
-                      className="form-control form-control-lg"
-                      id="exampleInputEmail"
-                      onChange={inputHandler}
-                      placeholder="example.com"
-                      value={inputs.email}
-                      required
-                    />
+                    type="email"
+                    name="email"
+                    className="form-control form-control-lg"
+                    id="exampleInputEmail"
+                    onChange={inputHandler}
+                    placeholder="example.com"
+                    value={inputs.email}
+                    required
+                  />
                 </div>
                 <div className="mb-3">
                   <input
-                      type="password"
-                      name="password"
-                      className="form-control form-control-lg"
-                      id="exampleInputPassword"
-                      onChange={inputHandler}
-                      placeholder="Password"
-                      value={inputs.password}
-                      required
-                    />
+                    type="password"
+                    name="password"
+                    className="form-control form-control-lg"
+                    id="exampleInputPassword"
+                    onChange={inputHandler}
+                    placeholder="Password"
+                    value={inputs.password}
+                    required
+                  />
                 </div>
                 <div className="mb-3">
                   <input
-                      type="password"
-                      name="cpassword"
-                      className="form-control form-control-lg"
-                      id="exampleInputcPassword"
-                      onChange={inputHandler}
-                      placeholder="Password"
-                      value={inputs.cpassword}
-                      required
-                    />
+                    type="password"
+                    name="cpassword"
+                    className="form-control form-control-lg"
+                    id="exampleInputcPassword"
+                    onChange={inputHandler}
+                    placeholder="Password"
+                    value={inputs.cpassword}
+                    required
+                  />
                 </div>
                 <button type="submit" className="btn btn-primary" onClick={submitHandler}>Submit</button>
               </form>
             </div>
             <div className="modal-footer">
-              <div>
+              <div className="d-flex flex-column">
                 <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Sign up with Facebook</button>
                 <button type="button" className="btn btn-primary">Sign up with Google</button>
               </div>

@@ -1,36 +1,32 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import Card from './Card';
+// import Card from './Card';
 
 const PostContainer = () => {
-  const Posts = useSelector((state) => state.posts);
-  const dispatch = useDispatch();
-
-  const LinkHandler = (payload) => {
-    if (payload !== 'All Posts') {
-    }
+  // const Posts = useSelector((state) => state.posts);
+  const LinkHandler = () => {
+    console.log('checx');
   };
 
   return (
     <div className="mt-5">
       <ul className="d-flex list-unstyled">
         <li>
-          <button className="btn" onClick={LinkHandler('All Posts')}>All Posts</button>
+          <button className="btn" onClick={LinkHandler('All Posts')} type="button">All Posts</button>
         </li>
         <li>
           {' '}
-          <button className="btn" onClick={LinkHandler('✍️ Article')}>Article</button>
+          <button className="btn" onClick={LinkHandler('✍️ Article')} type="button">Article</button>
         </li>
         <li>
-          <button className="btn" onClick={LinkHandler('🗓️ Meetup')}>Event</button>
-        </li>
-        <li>
-          {' '}
-          <button className="btn" onClick={LinkHandler('🔬️ Education')}>Education</button>
+          <button className="btn" onClick={LinkHandler('🗓️ Meetup')} type="button">Event</button>
         </li>
         <li>
           {' '}
-          <button className="btn" onClick={LinkHandler('💼️ Job')}>Job</button>
+          <button className="btn" onClick={LinkHandler('🔬️ Education')} type="button">Education</button>
+        </li>
+        <li>
+          {' '}
+          <button className="btn" onClick={LinkHandler('💼️ Job')} type="button">Job</button>
         </li>
       </ul>
     </div>

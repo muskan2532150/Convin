@@ -21,7 +21,7 @@ const Card = ({ card }) => (
             </div>
             <div className=" d-flex align-items-center">
               <p className="views mb-0">1.4k views</p>
-              <button className="share btn">Share</button>
+              <button className="share btn" type="button">Share</button>
             </div>
           </div>
         </div>

@@ -22,7 +22,7 @@ const Navbar = () => {
             <span className="navbar-toggler-icon" />
           </button>
         </div>
-        <div className="collapse navbar-collapse fs-4" id="navbarSupportedContent">
+        <div className="collapse navbar-collapse fs-4 justify-content-around" id="navbarSupportedContent" >
           <form className="d-flex" role="search">
             <input
               className="form-control me-2 srinput"
@@ -34,14 +34,15 @@ const Navbar = () => {
             />
             <button className="btn btn-outline-success" type="submit" onClick={searchHandler}>Search</button>
           </form>
-        </div>
-        <p>
+          <p>
           create account.
-          <span><button type="button" className="btn text-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Its free!
-</button>
-</span>
+          <span>
+            <button type="button" className="btn text-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Its free!
+            </button>
+          </span>
         </p>
+        </div>
       </div>
     </nav>
   );
