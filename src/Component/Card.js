@@ -2,50 +2,31 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterdata } from '../store/cardSlice';
 
-const Card = () => {
-  const cards = useSelector((state) => state.card);
+const Posts = () => {
+  const Posts = useSelector((state) => state.posts);
   const dispatch = useDispatch();
 
-  const deleteHandler = (card) => {
-    dispatch(filterdata(card.id));
+  const deleteHandler = (Posts) => {
+    dispatch(filterdata(Posts.id));
   };
 
   return (
     <>
-      {cards.map((card) => (
-        <div className="card" key={card.id}>
-          <div className="card-body">
-            <h5 className="card-title text-body-secondary">
-              {' '}
-              {card.name}
-            </h5>
-            <h6 className="card-subtitle mb-2 text-body-secondary">
-              {card.video}
-              {' '}
-              video
-            </h6>
-            <button
-              type="button"
-              className="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target={`#${card.id}`}
-            >
-              See More
-            </button>
-            <div className="modal fade custommodal" id={card.id} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div className="modal-dialog">
-                <div className="modal-content">
-                  <div className="modal-header">
-                    <h1 className="modal-title fs-5 text-dark" id="exampleModalLabel">{card.name}</h1>
-                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
-                  </div>
-                  <div className="modal-body">
-                    <iframe src={card.url} allow="autoplay" title={card.name} />
-                  </div>
-                </div>
-              </div>
+      {Posts.map((post) => (
+        <div className="post" key={post.id}>
+          <div className="post-body">
+            <img className="img-fluid" src={post.title_img} alt='' />
+            <p>{post.type}</p>
+            <h6 className="post-subtitle mb-2 text-body-secondary">{post.title}</h6>
+            <p>{post.desc}</p>
+            <div className='date'>
+              <p>{post.date?post.date:''}</p>
+              <p>{post.location?post.location:''}</p>
             </div>
-            <button type="button" className="btn btn-sm btn-danger ms-3" onClick={() => deleteHandler(card)}>Delete</button>
+            <div className="author">
+            <img src={post.author_img} alt=''/>
+            <h6>{post.author}</h6>
+            </div>
           </div>
         </div>
       ))}
@@ -53,4 +34,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default Posts;
