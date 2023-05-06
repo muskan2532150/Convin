@@ -24,7 +24,7 @@ const PostContainer = () => {
   return (
     <div className="main-section">
       <div className="main-img">
-        <div className="d-flex justify-content-between pt-4 ">
+        <div className="d-flex justify-content-between pt-4 px-2 ">
           <button type="button">Arrow</button>
           <button className="btn btn-outline-dark text-white" type="button">Join Group</button>
         </div>

@@ -5,16 +5,20 @@
 .main-img {
     background-image: url(../assets/images/home.png);
     opacity: 0.9;
-    height: 50vh;
     background-repeat: no-repeat;
     width: 100%;
-    background-size: 129%;
+    background-size: cover;
     background-position: 0px -250px;
 }
 
 .main-body {
     margin: 220px;
     color: #fff;
+    margin-bottom: 0;
+}
+
+.main-body p {
+    padding-bottom: 50px;
 }
 
 .main-body h4 {
