@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../assets/Card.css';
 
 const Card = ({ card }) => (
@@ -29,5 +30,13 @@ const Card = ({ card }) => (
     ))}
   </>
 );
+
+Card.propTypes = {
+  card: PropTypes.shape,
+};
+
+Card.defaultProps = {
+  card: {},
+};
 
 export default Card;

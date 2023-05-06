@@ -5,7 +5,6 @@ import SignPage from './SignPage';
 
 const Navbar = () => {
   const [query, setQuery] = useState('');
-  const [signbtn, setSignbtn] = useState(false);
 
   const SearchInput = (e) => {
     setQuery(e.target.value);
@@ -18,7 +17,7 @@ const Navbar = () => {
   const ClickHandle = () => {
     document.body.style.overflow = 'hidden';
     document.querySelector('.overlay').style.display = 'flex';
-    <SignPage/>;
+      <SignPage />;
   };
 
   return (

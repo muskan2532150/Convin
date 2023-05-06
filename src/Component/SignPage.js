@@ -1,11 +1,8 @@
 /* eslint-disable camelcase */
 import React, { useState } from 'react';
 import '../assets/SignPage.css';
-import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
-// import { signupUser } from '../auth/Auth';
 
-const SignPage = ({ setSignbtn }) => {
+const SignPage = () => {
   const [state, setState] = useState({
     fname: '',
     lname: '',
@@ -55,7 +52,6 @@ const SignPage = ({ setSignbtn }) => {
         <div className="sign-orange d-flex flex-column">
           <h1 className="fw-bold">Create Account </h1>
           <form className="sign-form d-flex flex-column">
-
             <div className="mb-3 d-flex">
               <input
                 type="text"
@@ -168,10 +164,10 @@ const SignPage = ({ setSignbtn }) => {
         </div>
 
         <div className="text-end cbg">
-          <button type="button" className="btn-close" onClick={closeHandle} />
+          <button type="button" className="btn-close" onClick={closeHandle}>.</button>
           <p>
             Already have an account?
-            <a href="#" className="text-decoration-none">Sign In</a>
+            <a href="." className="text-decoration-none">Sign In</a>
           </p>
           <p>By signing up, you agree to our Terms & conditions, Privacy policy</p>
         </div>
@@ -179,6 +175,5 @@ const SignPage = ({ setSignbtn }) => {
     </section>
   );
 };
-
 
 export default SignPage;
