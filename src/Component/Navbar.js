@@ -23,13 +23,13 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary custom-nav">
       <div className="container-fluid">
-        <div className="d-flex justify-content-between w-100">
+        <div className="d-flex justify-content-between w-100 p-2">
           <Link className="navbar-brand fs-2" to="/">LOGO</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button>
         </div>
-        <div className="collapse navbar-collapse fs-4 justify-content-around" id="navbarSupportedContent">
+        <div className="collapse navbar-collapse fs-4 justify-content-around w-100 gap-3" id="navbarSupportedContent">
           <form className="d-flex" role="search">
             <input
               className="form-control me-2 srinput"
@@ -44,7 +44,7 @@ const Navbar = () => {
           <p>
             create account.
             <span>
-              <button type="button" className="btn text-primary" onClick={ClickHandle}>
+              <button type="button" className="btn text-primary p-0" onClick={ClickHandle}>
                 Its free!
               </button>
             </span>

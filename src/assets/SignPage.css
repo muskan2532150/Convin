@@ -36,8 +36,8 @@ border-radius: 2px;
   .cbg{
     background-image: url('./images/signpage.png');
     background-repeat: no-repeat;
-    background-position: end;
-    background-size: cover;
+    background-position: -149px 30px;
+    background-size: 150px;
   }
 
   
