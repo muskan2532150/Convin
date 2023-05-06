@@ -47,8 +47,7 @@
 
 @media (min-width: 500px) {
 
-  .post,
-  .new-form {
+  .post {
     width: 30rem;
   }
 

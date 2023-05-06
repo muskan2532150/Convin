@@ -1,3 +1,41 @@
-.form{
-width: 50%;
+.overlay{
+    background: rgb(0 0 0 / 20%);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
 }
+
+.sign {
+    margin-top: 8rem;
+    padding: 3rem;
+    height: 100%;
+  }
+  
+  .sign-orange {
+    height: 100%;
+  }
+  
+  .sign-form {
+    width: 350px;
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .custom-sign-btn{
+    border-radius: 20px;
+    background-color: #2F6CE5;
+  }
+
+  .cborder{
+    border: 0.6px solid #D9D9DB;
+border-radius: 2px;
+  }
+
+  .cbg{
+    background-image: url('./images/signpage.png');
+    background-repeat: no-repeat;
+    background-position: end;
+    background-size: cover;
+  }
+
+  
