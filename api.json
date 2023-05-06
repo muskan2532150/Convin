@@ -1,0 +1,46 @@
+[
+    {
+        "id":1,
+        "title": "What if famous brands had regular fonts? Meet RegulaBrands!",
+        "desc":"I’ve worked in UX for the better part of a decade. From now on, I plan to rei…",
+        "type":"Article",
+        "url": "https://google.com",
+        "author":"Sarthak Kamra",
+        "title_img":"./images/title1.png",
+        "author_img":"./images/auth1.png"
+    },
+    {
+        "id":2,
+        "title": "Tax Benefits for Investment under National Pension Scheme launched by Government",
+        "desc":"I’ve worked in UX for the better part of a decade. From now on, I plan to rei…",
+        "type":"Education",
+        "url": "https://google.com",
+        "author":"Sarah West",
+        "title_img":"./images/title2.png",
+        "author_img":"./images/auth2.png"
+    },
+    {
+        "id":3,
+        "title": "Finance & Investment Elite Social Mixer @Lujiazui",
+        "desc":"I’ve worked in UX for the better part of a decade. From now on, I plan to rei…",
+        "type":"Meetup",
+        "location":"Ahmedabad, India",
+        "url": "https://google.com",
+        "author":"Ronal Jones",
+        "date":"Fri, 12 Oct, 2018",
+        "title_img":"./images/title3.png",
+        "author_img":"./images/auth3.png"
+    },
+    {
+        "id":4,
+        "title": "Software Developer",
+        "desc":"Innovaccer Analytics Private Ltd.",
+        "type":"Job",
+        "location":"Noida, India",
+        "url": "https://google.com",
+        "author":"Joseph Gray",
+        "date":"",
+        "title_img":"",
+        "author_img":"./images/auth4.png"
+   }
+]
