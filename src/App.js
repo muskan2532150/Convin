@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { useEffect } from 'react';
 import Navbar from './Component/Navbar';
-// import PostContainer from './Component/PostContainer';
+import PostContainer from './Component/PostContainer';
 import { PostThunk } from './store/cardSlice';
 import SignPage from './Component/SignPage';
-import Card from './Component/Card';
+// import Card from './Component/Card';
 
 function App() {
-  const Posts = useSelector((state) => state.posts);
+  // const Posts = useSelector((state) => state.posts);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -20,7 +20,8 @@ function App() {
     <Router>
       <Navbar />
       <SignPage />
-      <Card card={Posts} />
+      <PostContainer />
+      {/* <Card card={Posts} /> */}
       {/* <Routes>
         <Route path="/" element={<PostContainer />} />
         <Route path="/PostContainer" element={<PostContainer />} />

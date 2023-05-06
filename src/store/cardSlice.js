@@ -16,10 +16,6 @@ const PostSlice = createSlice({
   initialState,
   reducers: {
     setdata: (state, action) => action.payload,
-    appenddata: (state, action) => [
-      ...state, action.payload,
-    ],
-
     filterdata: (state, action) => state.filter((item) => item.type !== action.payload),
 
   },
@@ -33,6 +29,6 @@ const PostSlice = createSlice({
   },
 });
 
-export const { setdata, appenddata, filterdata } = PostSlice.actions;
+export const { setdata, filterdata } = PostSlice.actions;
 
 export default PostSlice.reducer;

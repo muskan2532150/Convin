@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import '../assets/Navbar.css';
+import SignPage from './SignPage';
 
 const Navbar = () => {
   const [query, setQuery] = useState('');
+  const [signbtn, setSignbtn] = useState(false);
 
   const SearchInput = (e) => {
     setQuery(e.target.value);
@@ -11,6 +13,12 @@ const Navbar = () => {
 
   const searchHandler = (e) => {
     e.preventDefault();
+  };
+
+  const ClickHandle = () => {
+    document.body.style.overflow = 'hidden';
+    document.querySelector('.overlay').style.display = 'flex';
+    <SignPage/>;
   };
 
   return (
@@ -37,7 +45,7 @@ const Navbar = () => {
           <p>
             create account.
             <span>
-              <button type="button" className="btn text-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <button type="button" className="btn text-primary" onClick={ClickHandle}>
                 Its free!
               </button>
             </span>
