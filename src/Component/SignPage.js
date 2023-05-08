@@ -73,7 +73,7 @@ const SignPage = () => {
               />
             </div>
 
-            {/* <div className="mb-3">
+            <div className="mb-3">
             <input
               type="text"
               name="profile_pic"
@@ -83,7 +83,7 @@ const SignPage = () => {
               value={state.profile_pic}
               onChange={handleChange}
             />
-          </div> */}
+          </div>
 
             <div className="mb-3">
               <input
@@ -97,7 +97,7 @@ const SignPage = () => {
               />
             </div>
 
-            {/* <div className="mb-3">
+            <div className="mb-3">
             <input
               type="tel"
               name="phone_number"
@@ -111,7 +111,7 @@ const SignPage = () => {
               id="phone"
               onChange={handleChange}
             />
-          </div> */}
+          </div>
 
             <div className="mb-3">
               <input
@@ -169,7 +169,7 @@ const SignPage = () => {
             Already have an account?
             <a href="." className="text-decoration-none">Sign In</a>
           </p>
-          <p>By signing up, you agree to our Terms & conditions, Privacy policy</p>
+          <p className='d-flex align-items-end ps-2 h-100'>By signing up, you agree to our Terms & conditions, Privacy policy</p>
         </div>
       </div>
     </section>
