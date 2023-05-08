@@ -18,11 +18,20 @@
   font-weight: 500;
 }
 
-
 .title {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 22px;
   line-height: 134.17%;
+}
+
+.meetup-btn{
+  border: 0.7px solid #A9AEB8;
+border-radius: 8px;
+width: 100%;
+}
+
+.meetup-link{
+  color:#E56135;
 }
 
 .author {
@@ -45,10 +54,12 @@
   border-radius: 2px;
 }
 
-@media (min-width: 500px) {
+@media (max-width: 576px) {
 
   .post {
-    width: 30rem;
+    width: auto;
+    margin: 0;
+    margin-bottom: 2rem;
   }
 
   /*   
