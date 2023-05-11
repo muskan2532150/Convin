@@ -39,7 +39,7 @@ const PostContainer = () => {
         </div>
       </div>
       <div className="p-4">
-        <div className="d-flex justify-content-between pe-3 align-items-center">
+        <div className="d-flex justify-content-between align-items-center pe-3 align-items-center">
           <ul className="d-sm-flex d-none list-unstyled">
             <li>
               <button className="btn li-btn" onClick={() => LinkHandler('All Posts')} type="button">All Posts</button>
@@ -61,7 +61,7 @@ const PostContainer = () => {
             </li>
           </ul>
          <div className='d-sm-none d-flex mb-3 justify-content-between w-100'>
-          <p className='selectp'>Posts</p>
+          <p className='selectp fw-600'>Posts</p>
          <select onChange={() => SelectHandler()} id="select" className="form-select form-select-lg ">
             <option value="All Posts">All Posts </option>
             <option value="Article">Article</option>
