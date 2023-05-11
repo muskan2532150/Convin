@@ -21,11 +21,16 @@ const PostContainer = () => {
     }
   };
 
+  const SelectHandler = () => {
+    const { value } = document.querySelector('#select');
+    LinkHandler(value);
+  };
+
   return (
     <div className="main-section">
       <div className="main-img">
         <div className="d-flex justify-content-between pt-4 px-2 ">
-          <button type="button">Arrow</button>
+          <button type="button" className="btn"><i className="bi bi-arrow-left" /></button>
           <button className="btn btn-outline-dark text-white" type="button">Join Group</button>
         </div>
         <div className="main-body">
@@ -35,7 +40,7 @@ const PostContainer = () => {
       </div>
       <div className="p-4">
         <div className="d-flex justify-content-between pe-3 align-items-center">
-          <ul className="d-flex list-unstyled">
+          <ul className="d-sm-flex d-none list-unstyled">
             <li>
               <button className="btn li-btn" onClick={() => LinkHandler('All Posts')} type="button">All Posts</button>
             </li>
@@ -55,6 +60,17 @@ const PostContainer = () => {
               <button className="btn li-btn" onClick={() => LinkHandler('Job')} type="button">Job</button>
             </li>
           </ul>
+         <div className='d-sm-none d-flex mb-3 justify-content-between w-100'>
+          <p className='selectp'>Posts</p>
+         <select onChange={() => SelectHandler()} id="select" className="form-select form-select-lg ">
+            <option value="All Posts">All Posts </option>
+            <option value="Article">Article</option>
+            <option value="Education">Education</option>
+            <option value="Job">Job</option>
+            <option value="Meetup">Meetup</option>
+          </select>
+         </div>
+          
           <div className="d-none d-sm-flex gap-3">
             <button className="bdcolor btn" type="button">Write a Post</button>
             <button className="btn bordrx btn bordercolor" type="button">Join Group</button>
