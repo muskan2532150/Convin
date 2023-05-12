@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Card from './Card';
 import '../assets/PostContainer.css';
@@ -72,7 +73,7 @@ const PostContainer = () => {
           </div>
 
           <div className="d-none d-sm-flex gap-3">
-            <button className="bdcolor btn" type="button">Write a Post</button>
+            <Link to="/createpost" className="bdcolor btn">Write a Post</Link>
             <button className="btn bordrx btn bordercolor" type="button">Join Group</button>
           </div>
         </div>
