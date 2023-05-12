@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import '../assets/Navbar.css';
-import SignPage from './SignPage';
+// import SignPage from './SignPage';
+import SignInPage from './SignInPage';
 
 const Navbar = () => {
   const [query, setQuery] = useState('');
@@ -17,7 +18,7 @@ const Navbar = () => {
   const ClickHandle = () => {
     document.body.style.overflow = 'hidden';
     document.querySelector('.overlay').style.display = 'flex';
-      <SignPage />;
+      <SignInPage />;
   };
 
   return (
