@@ -1,12 +1,14 @@
 import './App.css';
 import { useDispatch } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useEffect } from 'react';
 import Navbar from './Component/Navbar';
 import PostContainer from './Component/PostContainer';
 import { PostThunk } from './store/cardSlice';
 import SignPage from './Component/SignPage';
 // import Card from './Component/Card';
+import SignInPage from './Component/SignInPage';
+import Postform from './Component/Postform';
 
 function App() {
   // const Posts = useSelector((state) => state.posts);
@@ -19,14 +21,13 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <SignInPage />
       <SignPage />
-      <PostContainer />
-      {/* <Card card={Posts} /> */}
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<PostContainer />} />
-        <Route path="/PostContainer" element={<PostContainer />} />
-        <Route path="/sign" element={<SignPage />} />
-      </Routes> */}
+        <Route path="/signin" element={<SignInPage />} />
+        <Route path="/createpost" element={<Postform />} />
+      </Routes>
     </Router>
   );
 }
