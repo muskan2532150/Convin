@@ -98,4 +98,8 @@ option {
         margin-left: 2rem;
         margin-right: 0;
     }
+
+    .main-body h4{
+        font-size: 2rem;
+    }
 }

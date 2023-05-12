@@ -60,17 +60,17 @@ const PostContainer = () => {
               <button className="btn li-btn" onClick={() => LinkHandler('Job')} type="button">Job</button>
             </li>
           </ul>
-         <div className='d-sm-none d-flex mb-3 justify-content-between w-100'>
-          <p className='selectp fw-600'>Posts</p>
-         <select onChange={() => SelectHandler()} id="select" className="form-select form-select-lg ">
-            <option value="All Posts">All Posts </option>
-            <option value="Article">Article</option>
-            <option value="Education">Education</option>
-            <option value="Job">Job</option>
-            <option value="Meetup">Meetup</option>
-          </select>
-         </div>
-          
+          <div className="d-sm-none d-flex mb-3 justify-content-between align-items-center w-100">
+            <p className="selectp fw-600 m-0">Posts</p>
+            <select onChange={() => SelectHandler()} id="select" className="form-select form-select-lg ">
+              <option value="All Posts">All Posts </option>
+              <option value="Article">Article</option>
+              <option value="Education">Education</option>
+              <option value="Job">Job</option>
+              <option value="Meetup">Meetup</option>
+            </select>
+          </div>
+
           <div className="d-none d-sm-flex gap-3">
             <button className="bdcolor btn" type="button">Write a Post</button>
             <button className="btn bordrx btn bordercolor" type="button">Join Group</button>
