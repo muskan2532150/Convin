@@ -41,12 +41,12 @@ const SignPage = () => {
     // }
   };
 
-//  const SignHandler = () => {
-//   document.querySelector('.overlay').style.display = ' none';
-//   document.querySelector('.signinoverlay').style.display = 'flex';
-//   console.log('jjj'); 
-//   <SignInPage />
-//  }
+ const SignHandler = () => {
+  document.querySelector('.overlay').style.display = ' none';
+  document.querySelector('.signinoverlay').style.display = 'flex';
+  console.log('jjj'); 
+  <SignInPage />
+ }
 
   const closeHandle = () => {
     document.body.style.overflow = 'auto';
@@ -140,7 +140,7 @@ const SignPage = () => {
               {' '}
               Create Account
             </button>
-            <button type="button" className="btn text-decoration-underline d-sm-none" onClick={()=>SignHandler}>or signin</button>
+            <button type="button" className="btn text-decoration-underline d-sm-none" onClick={SignHandler}>or signin</button>
 </div>
           </form>
           <div className="mt-1">

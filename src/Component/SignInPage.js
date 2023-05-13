@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import SignPage from './SignPage';
+
 
 const SignInPage = () => {
   const [state, setState] = useState({
@@ -13,6 +15,12 @@ const SignInPage = () => {
       [e.target.name]: e.target.value,
     }));
   };
+
+  const SignInHandler = () => {
+      document.querySelector('.overlay').style.display = 'flex';
+      document.querySelector('.signinoverlay').style.display = 'none'; 
+      <SignPage />;
+  }
 
   const handlelogin = (e) => {
     e.preventDefault();
@@ -33,11 +41,11 @@ const SignInPage = () => {
 
   const closeHandle = () => {
     document.body.style.overflow = 'auto';
-    document.querySelector('.overlay').style.display = 'none';
+    document.querySelector('.signinoverlay').style.display = 'none';
   };
 
   return (
-    <section className="overlay">
+    <section className="signinoverlay">
       <div className="sign d-flex">
         <div className="sign-orange d-flex flex-column">
           <h1 className="fw-bold">Sign IN </h1>
@@ -50,7 +58,7 @@ const SignInPage = () => {
                 placeholder="Email Address "
                 value={state.email_address}
                 className="form-control"
-                id="email"
+                id="emailadd"
                 onChange={handleChange}
               />
             </div>
@@ -61,7 +69,7 @@ const SignInPage = () => {
                 type="password"
                 name="password"
                 className="form-control"
-                id="password"
+                id="passwords"
                 value={state.password}
                 onChange={handleChange}
               />
@@ -76,7 +84,7 @@ const SignInPage = () => {
                 {' '}
                 Sign IN
               </button>
-              <button type="button" className="btn text-decoration-underline d-sm-none">or create new</button>
+              <button type="button" className="btn text-decoration-underline d-sm-none" onClick={SignInHandler}>or create new</button>
             </div>
           </form>
           <div className="mt-1">
@@ -98,8 +106,8 @@ const SignInPage = () => {
         </div>
 
         <div className="text-end cbg">
-          <button type="button" className="btn-close" onClick={closeHandle}></button>
-          <p className='d-none d-sm-block'>
+          <button type="button" className="btn-close" onClick={closeHandle} />
+          <p className="d-none d-sm-block">
             Don’t have an account yet?
             <a href="." className="text-decoration-none">Create new for free!</a>
           </p>
