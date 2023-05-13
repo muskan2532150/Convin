@@ -1,6 +1,8 @@
 /* eslint-disable camelcase */
 import React, { useState } from 'react';
 import '../assets/SignPage.css';
+import SignInPage from './SignInPage';
+
 
 const SignPage = () => {
   const [state, setState] = useState({
@@ -38,6 +40,13 @@ const SignPage = () => {
     //   signupUser(state);
     // }
   };
+
+//  const SignHandler = () => {
+//   document.querySelector('.overlay').style.display = ' none';
+//   document.querySelector('.signinoverlay').style.display = 'flex';
+//   console.log('jjj'); 
+//   <SignInPage />
+//  }
 
   const closeHandle = () => {
     document.body.style.overflow = 'auto';
@@ -122,6 +131,7 @@ const SignPage = () => {
               />
             </div>
 
+      <div className=''>
             <button
               type="submit"
               onClick={handlelogin}
@@ -130,6 +140,8 @@ const SignPage = () => {
               {' '}
               Create Account
             </button>
+            <button type="button" className="btn text-decoration-underline d-sm-none" onClick={()=>SignHandler}>or signin</button>
+</div>
           </form>
           <div className="mt-1">
             <button className="fw-semibold btn cborder w-100 mb-2" type="button">
