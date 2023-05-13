@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import '../assets/SignPage.css';
 import SignInPage from './SignInPage';
 
-
 const SignPage = () => {
   const [state, setState] = useState({
     fname: '',
@@ -41,12 +40,11 @@ const SignPage = () => {
     // }
   };
 
- const SignHandler = () => {
-  document.querySelector('.overlay').style.display = ' none';
-  document.querySelector('.signinoverlay').style.display = 'flex';
-  console.log('jjj'); 
-  <SignInPage />
- }
+  const SignHandler = () => {
+    document.querySelector('.overlay').style.display = ' none';
+    document.querySelector('.signinoverlay').style.display = 'flex';
+      <SignInPage />
+  };
 
   const closeHandle = () => {
     document.body.style.overflow = 'auto';
@@ -83,7 +81,6 @@ const SignPage = () => {
               />
             </div>
 
-            <div className="">
               <input
                 type="text"
                 name="profile_pic"
@@ -93,9 +90,7 @@ const SignPage = () => {
                 value={state.profile_pic}
                 onChange={handleChange}
               />
-            </div>
 
-            <div className="">
               <input
                 type="email"
                 name="email_address"
@@ -105,9 +100,7 @@ const SignPage = () => {
                 id="email"
                 onChange={handleChange}
               />
-            </div>
 
-            <div className="">
               <input
                 placeholder="Password"
                 type="password"
@@ -117,9 +110,7 @@ const SignPage = () => {
                 value={state.password}
                 onChange={handleChange}
               />
-            </div>
 
-            <div className="">
               <input
                 type="password"
                 placeholder="Confirm Password"
@@ -129,19 +120,18 @@ const SignPage = () => {
                 value={state.confirm_password}
                 onChange={handleChange}
               />
-            </div>
 
-      <div className=''>
-            <button
-              type="submit"
-              onClick={handlelogin}
-              className="btn custom-sign-btn text-white my-2"
-            >
-              {' '}
-              Create Account
-            </button>
-            <button type="button" className="btn text-decoration-underline d-sm-none" onClick={SignHandler}>or signin</button>
-</div>
+            <div>
+              <button
+                type="submit"
+                onClick={handlelogin}
+                className="btn custom-sign-btn text-white my-2"
+              >
+                {' '}
+                Create Account
+              </button>
+              <button type="button" className="btn text-decoration-underline d-sm-none" onClick={SignHandler}>or signin</button>
+            </div>
           </form>
           <div className="mt-1">
             <button className="fw-semibold btn cborder w-100 mb-2" type="button">

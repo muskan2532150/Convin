@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import SignPage from './SignPage';
 
-
 const SignInPage = () => {
   const [state, setState] = useState({
     email_address: '',
@@ -17,10 +16,10 @@ const SignInPage = () => {
   };
 
   const SignInHandler = () => {
-      document.querySelector('.overlay').style.display = 'flex';
-      document.querySelector('.signinoverlay').style.display = 'none'; 
+    document.querySelector('.overlay').style.display = 'flex';
+    document.querySelector('.signinoverlay').style.display = 'none';
       <SignPage />;
-  }
+  };
 
   const handlelogin = (e) => {
     e.preventDefault();
