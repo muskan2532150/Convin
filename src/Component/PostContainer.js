@@ -39,7 +39,7 @@ const PostContainer = () => {
           <p>142,765 Computer Engineers follow this</p>
         </div>
       </div>
-      <div className="p-4">
+      <div className="p-4 px-5">
         <div className="d-flex justify-content-between align-items-center pe-3 align-items-center">
           <ul className="d-sm-flex d-none list-unstyled">
             <li>
@@ -73,8 +73,8 @@ const PostContainer = () => {
           </div>
 
           <div className="d-none d-sm-flex gap-3">
-            <Link to="/createpost" className="bdcolor btn">Write a Post</Link>
-            <button className="btn bordrx btn bordercolor" type="button">Join Group</button>
+            <Link to="/createpost" className="bdcolor p-4 btn">Write a Post</Link>
+            <button className="btn bordercolor p-4" type="button">Join Group</button>
           </div>
         </div>
         <Card card={posts} />
