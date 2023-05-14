@@ -31,7 +31,7 @@ const PostContainer = () => {
     <div className="main-section">
       <div className="main-img">
         <div className="d-flex justify-content-between pt-4 px-2 ">
-          <button type="button" className="btn"><i className="bi bi-arrow-left" /></button>
+          <button type="button" className="btn" aria-label="close-btn"><i className="bi bi-arrow-left" /></button>
           <button className="btn btn-outline-dark text-white" type="button">Join Group</button>
         </div>
         <div className="main-body">

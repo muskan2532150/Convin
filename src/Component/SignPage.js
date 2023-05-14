@@ -43,7 +43,7 @@ const SignPage = () => {
   const SignHandler = () => {
     document.querySelector('.overlay').style.display = ' none';
     document.querySelector('.signinoverlay').style.display = 'flex';
-      <SignInPage />
+      <SignInPage />;
   };
 
   const closeHandle = () => {
@@ -57,7 +57,7 @@ const SignPage = () => {
         <div className="">
           <div className="d-flex justify-content-between">
             <h1 className="fw-bold">Create Account </h1>
-            <button type="button" className="btn-close d-sm-none" onClick={closeHandle} />
+            <button type="button" className="btn-close d-sm-none" onClick={closeHandle} aria-label="close-btn" />
           </div>
           <form className="sign-form d-flex flex-column">
             <div className="d-flex">
@@ -81,45 +81,45 @@ const SignPage = () => {
               />
             </div>
 
-              <input
-                type="text"
-                name="profile_pic"
-                placeholder="enter your profile image url"
-                className="form-control"
-                id="pic"
-                value={state.profile_pic}
-                onChange={handleChange}
-              />
+            <input
+              type="text"
+              name="profile_pic"
+              placeholder="enter your profile image url"
+              className="form-control"
+              id="pic"
+              value={state.profile_pic}
+              onChange={handleChange}
+            />
 
-              <input
-                type="email"
-                name="email_address"
-                placeholder="Email Address "
-                value={state.email_address}
-                className="form-control"
-                id="email"
-                onChange={handleChange}
-              />
+            <input
+              type="email"
+              name="email_address"
+              placeholder="Email Address "
+              value={state.email_address}
+              className="form-control"
+              id="email"
+              onChange={handleChange}
+            />
 
-              <input
-                placeholder="Password"
-                type="password"
-                name="password"
-                className="form-control"
-                id="password"
-                value={state.password}
-                onChange={handleChange}
-              />
+            <input
+              placeholder="Password"
+              type="password"
+              name="password"
+              className="form-control"
+              id="password"
+              value={state.password}
+              onChange={handleChange}
+            />
 
-              <input
-                type="password"
-                placeholder="Confirm Password"
-                name="confirm_password"
-                className="form-control"
-                id="confirm-password"
-                value={state.confirm_password}
-                onChange={handleChange}
-              />
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              name="confirm_password"
+              className="form-control"
+              id="confirm-password"
+              value={state.confirm_password}
+              onChange={handleChange}
+            />
 
             <div>
               <button
@@ -153,7 +153,7 @@ const SignPage = () => {
         </div>
 
         <div className="text-end cbg d-none d-sm-block">
-          <button type="button" className="btn-close float-end" onClick={closeHandle} />
+          <button type="button" className="btn-close float-end" onClick={closeHandle} aria-label="close-btn" />
           <p className="mt-2">
             Already have an account?
             <a href="." className="text-decoration-none">Sign In</a>

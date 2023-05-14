@@ -3,7 +3,7 @@ import SignPage from './SignPage';
 
 const SignInPage = () => {
   const [state, setState] = useState({
-    email_address: '',
+    emailAddress: '',
     password: '',
   });
   const [message, setMessage] = useState('');
@@ -24,8 +24,8 @@ const SignInPage = () => {
   const handlelogin = (e) => {
     e.preventDefault();
 
-    const { email_address, password } = state;
-    if (email_address.length === 0 || password.length === 0) {
+    const { emailAddress, password } = state;
+    if (emailAddress.length === 0 || password.length === 0) {
       onsubmit = false;
       setMessage('empty inputs');
     }
@@ -53,9 +53,9 @@ const SignInPage = () => {
             <div className="mb-3">
               <input
                 type="email"
-                name="email_address"
+                name="emailAddress"
                 placeholder="Email Address "
-                value={state.email_address}
+                value={state.emailAddress}
                 className="form-control"
                 id="emailadd"
                 onChange={handleChange}
@@ -105,7 +105,7 @@ const SignInPage = () => {
         </div>
 
         <div className="text-end cbg">
-          <button type="button" className="btn-close" onClick={closeHandle} />
+          <button type="button" className="btn-close" onClick={closeHandle} aria-label="close-btn" />
           <p className="d-none d-sm-block">
             Don’t have an account yet?
             <a href="." className="text-decoration-none">Create new for free!</a>
