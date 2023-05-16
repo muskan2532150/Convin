@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import '../assets/Postform.css';
-import {appenddata} from '../store/cardSlice'
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { appenddata } from '../store/cardSlice';
 
 const Postform = () => {
   const [state, setState] = useState({
-    id:5,
+    id: 5,
     author: '',
     url: '',
     title: '',
@@ -32,7 +32,7 @@ const Postform = () => {
     e.preventDefault();
     console.log(state);
     dispatch(appenddata(state));
-    navigate("/");
+    navigate('/');
   };
 
   return (

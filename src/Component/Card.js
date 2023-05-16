@@ -58,7 +58,7 @@ const Card = ({ card }) => (
 
           <div className="d-flex justify-content-between align-items-center">
             <div className="author d-flex align-items-center gap-2">
-              <img src={post.author_img} alt="author img" className='author-img rounded-circle'/>
+              <img src={post.author_img} alt="author img" className="author-img rounded-circle" />
               <div className="">
                 <h6 className="author mb-0">{post.author}</h6>
                 <p className="views mb-0 text-start d-sm-none">1.4k views</p>

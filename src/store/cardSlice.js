@@ -16,9 +16,9 @@ const PostSlice = createSlice({
   initialState,
   reducers: {
     appenddata: (state, action) => [
-        ...state,
-        action.payload
-      ],
+      ...state,
+      action.payload,
+    ],
     filterdata: (state, action) => state.filter((item) => item.type !== action.payload),
 
   },
