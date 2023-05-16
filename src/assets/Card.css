@@ -24,6 +24,10 @@
   line-height: 134.17%;
 }
 
+.title-img{
+  width: 20%;
+}
+
 .meetup-btn{
   border: 0.7px solid #A9AEB8;
 border-radius: 8px;

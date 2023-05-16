@@ -6,7 +6,7 @@ const Card = ({ card }) => (
   <>
     {card.map((post) => (
       <div className="post" key={post.id}>
-        <img className="img-fluid" src={post.title_img} alt="" />
+        <img className="img-fluid rounded-circle title-img" src={post.title_img} alt="Title img" />
         <div className="post-body">
           <p className="type">{post.type}</p>
           <h6 className="mb-2 text-dark title">{post.title}</h6>
