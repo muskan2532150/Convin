@@ -6,7 +6,7 @@ const Card = ({ card }) => (
   <>
     {card.map((post) => (
       <div className="post" key={post.id}>
-        <img className="img-fluid rounded-circle title-img" src={post.title_img} alt="Title img" />
+        <img className="img-fluid" src={post.title_img} alt="Title img" />
         <div className="post-body">
           <p className="type">{post.type}</p>
           <h6 className="mb-2 text-dark title">{post.title}</h6>
@@ -58,7 +58,7 @@ const Card = ({ card }) => (
 
           <div className="d-flex justify-content-between align-items-center">
             <div className="author d-flex align-items-center gap-2">
-              <img src={post.author_img} alt="" />
+              <img src={post.author_img} alt="author img" className='author-img rounded-circle'/>
               <div className="">
                 <h6 className="author mb-0">{post.author}</h6>
                 <p className="views mb-0 text-start d-sm-none">1.4k views</p>
