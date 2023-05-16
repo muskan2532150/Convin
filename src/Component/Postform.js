@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import '../assets/Postform.css';
+import {appenddata} from '../store/cardSlice'
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const Postform = () => {
   const [state, setState] = useState({
-    aname: '',
+    id:5,
+    author: '',
     url: '',
     title: '',
     author_img: '',
@@ -14,6 +18,9 @@ const Postform = () => {
     type: '',
   });
 
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const handleChange = (e) => {
     setState((prevdata) => ({
       ...prevdata,
@@ -21,8 +28,11 @@ const Postform = () => {
     }));
   };
 
-  const handlelogin = () => {
-    console.log('postform');
+  const handlelogin = (e) => {
+    e.preventDefault();
+    console.log(state);
+    dispatch(appenddata(state));
+    navigate("/");
   };
 
   return (
@@ -33,10 +43,10 @@ const Postform = () => {
           <input
             type="text"
             placeholder="Author Name"
-            name="aname"
+            name="author"
             className="form-control mb-sm-3"
-            id="aname"
-            value={state.aname}
+            id="author"
+            value={state.author}
             onChange={handleChange}
             required
           />
