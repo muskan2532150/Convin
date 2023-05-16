@@ -156,7 +156,7 @@ const SignPage = () => {
           <button type="button" className="btn-close float-end" onClick={closeHandle} aria-label="close-btn" />
           <p className="mt-2">
             Already have an account?
-            <a href="." className="text-decoration-none">Sign In</a>
+            <button type="button" className="btn text-primary" onClick={SignHandler}>Sign In</button>
           </p>
           <img src="./images/signpage.png" alt="signPageImage" />
           <p className="d-flex align-items-end ps-2">By signing up, you agree to our Terms & conditions, Privacy policy</p>

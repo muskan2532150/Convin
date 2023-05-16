@@ -108,7 +108,7 @@ const SignInPage = () => {
           <button type="button" className="btn-close" onClick={closeHandle} aria-label="close-btn" />
           <p className="d-none d-sm-block">
             Don’t have an account yet?
-            <a href="." className="text-decoration-none">Create new for free!</a>
+            <button type="button" className="btn text-primary" onClick={SignInHandler}>Create new for free!</button>
           </p>
         </div>
       </div>
