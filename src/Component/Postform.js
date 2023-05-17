@@ -30,7 +30,6 @@ const Postform = () => {
 
   const handlelogin = (e) => {
     e.preventDefault();
-    console.log(state);
     dispatch(appenddata(state));
     navigate('/');
   };

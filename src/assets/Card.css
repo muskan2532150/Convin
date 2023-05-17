@@ -1,9 +1,13 @@
 .post {
-  width: 30rem;
+  width: 50rem;
   margin: 3rem 0 2rem 4rem;
   background: #FFFFFF;
   border: 1px solid #E0E0E0;
   border-radius: 4px;
+}
+
+.img-fluid{
+  width: 100%;
 }
 
 .post:first-child{
@@ -65,10 +69,4 @@ width: 100%;
     margin: 0;
     margin-bottom: 2rem;
   }
-
-  /*   
-    .new-form {
-      display: flex;
-      flex-direction: column;
-    } */
 }

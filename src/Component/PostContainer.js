@@ -12,7 +12,7 @@ const PostContainer = () => {
     if (!posts.length) {
       updatePosts(fetchPosts);
     }
-  }, [fetchPosts]);
+  }, [posts.length, fetchPosts]);
 
   const LinkHandler = (typeData) => {
     if (typeData === 'All Posts') {
@@ -74,7 +74,6 @@ const PostContainer = () => {
 
           <div className="d-none d-sm-flex gap-3">
             <Link to="/createpost" className="bdcolor p-4 btn">Write a Post</Link>
-            <button className="btn bordercolor p-4" type="button">Join Group</button>
           </div>
         </div>
         <Card card={posts} />
