@@ -42,7 +42,7 @@
     background: #EDEEF0;
     border-radius: 4px;
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 20px;
     color: #000000;
 }
@@ -84,6 +84,10 @@ option {
 
 
 @media (max-width: 576px) {
+    .main-section{
+margin-top: 4rem;
+    }
+
     .li-btn {
         font-size: 1.4rem;
     }

@@ -18,38 +18,44 @@ const Navbar = () => {
   const ClickHandle = () => {
     document.body.style.overflow = 'hidden';
     document.querySelector('.overlay').style.display = 'flex';
-      <SignInPage />;
+    <SignInPage />;
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary custom-nav">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary px-lg-5">
       <div className="container-fluid">
-        <div className="d-flex justify-content-between w-100 p-2">
-          <Link className="navbar-brand fs-2" to="/">LOGO</Link>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon" />
-          </button>
-        </div>
-        <div className="collapse navbar-collapse fs-4 justify-content-around w-100 gap-3" id="navbarSupportedContent">
-          <form className="d-flex" role="search">
-            <input
-              className="form-control me-2 srinput"
-              type="search"
-              placeholder="Search for your favorite groups in ATG"
-              aria-label="Search"
-              value={query}
-              onChange={SearchInput}
-            />
-            <button className="btn btn-outline-success" type="submit" onClick={searchHandler}>Search</button>
-          </form>
-          <p>
-            create account.
-            <span>
-              <button type="button" className="btn text-primary p-0" onClick={ClickHandle}>
-                Its free!
-              </button>
-            </span>
-          </p>
+        {/* <div className="d-flex justify-content-between w-100 p-2"> */}
+        <Link className="navbar-brand fs-2" to="/">LOGO</Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon" />
+        </button>
+        {/* </div> */}
+        <div className="collapse navbar-collapse fs-4 " id="navbarSupportedContent">
+          <div className='d-flex align-items-center justify-content-center flex-grow-1'>
+            <form className="d-flex mobile-search" role="search">
+              <input
+                className="form-control me-lg-2 srinput"
+                type="search"
+                placeholder="Search for your favorite groups in ATG"
+                aria-label="Search"
+                value={query}
+                onChange={SearchInput}
+              />
+              <div className='d-flex align-items-center'>
+                <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={searchHandler}>Search</button>
+              </div>
+            </form>
+          </div>
+          <div className='mobile-signup'>
+            <p className='d-flex align-items-center fs-3'>
+              create account.
+              <span>
+                <button type="button" className="btn text-primary p-0 fs-3" onClick={ClickHandle}>
+                  Its free!
+                </button>
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </nav>

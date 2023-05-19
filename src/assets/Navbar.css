@@ -1,12 +1,36 @@
-.custom-nav{
-background: #F8F9FA;
-}
-
-.custom-nav-css{
-    width: 100%;
+.custom-navbar{
+background: #B47978;
 }
 
 .srinput{
     background: #F2F2F2;
     border-radius: 21px;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin: 1rem 0;
 }
+
+/* Custom styles for Navbar */
+@media (max-width: 767px) {
+  .srinput{
+    padding: 1.4rem;
+    font-size: 1.3rem;
+  }
+
+    .mobile-search {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+  
+      .mobile-signup {
+        margin-top: 10px;
+      }
+
+      .mobile-btn{
+        width: 50%;
+      }
+}
+
+  
