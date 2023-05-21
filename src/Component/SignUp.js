@@ -1,6 +1,7 @@
 // /* eslint-disable camelcase */
 import '../assets/SignUp.css';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom/dist';
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -80,9 +81,8 @@ const SignUp = () => {
     }
   };
 
-
   return (
-    <div className="container custom-signup">
+    <div className="container custom-background">
       <h2 className="mb-4 signup-heading">Sign Up</h2>
       <div className="form-container">
         <form onSubmit={handleSubmit} noValidate>
@@ -152,7 +152,10 @@ const SignUp = () => {
           </div>
           {errors.profile_pic && <div className="text-danger">{errors.profile_pic}</div>}
 
-          <button type="submit" className="btn btn-success custom-font">Sign Up</button>
+          <div className="d-flex flex-column gap-2">
+            <button type="submit" className="btn btn-success custom-font">Sign Up</button>
+            <button type="button" className="btn btn-success custom-font"><Link to="/signin" className="text-decoration-none text-white">Sign In</Link></button>
+          </div>
         </form>
       </div>
     </div>

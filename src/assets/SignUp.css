@@ -1,7 +1,7 @@
 /* SignUp.css */
 
 /* Background Image */
-.custom-signup {
+.custom-background {
   margin-top: 7rem;
   background-image: url('./images/signpage.png');
   background-size: contain;
@@ -12,6 +12,11 @@
 
 .custom-font {
   font-size: 2rem;
+}
+
+.signin-pad {
+  padding: 6rem;
+  width: 30vw;
 }
 
 /* "Sign Up" Heading Styles */
@@ -48,5 +53,10 @@
 
   .custom-signup {
     margin-top: 4rem;
+  }
+
+  .signin-pad {
+    padding: 3rem;
+    width: 50vw;
   }
 }
