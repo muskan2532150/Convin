@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_01_131949) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_01_094313) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
@@ -19,11 +19,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_01_131949) do
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.uuid "post_id"
+    t.index ["post_id"], name: "index_comments_on_post_id"
   end
 
   create_table "likes", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.uuid "post_id"
+    t.index ["post_id"], name: "index_likes_on_post_id"
   end
 
   create_table "posts", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -31,6 +35,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_01_131949) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.uuid "user_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  create_table "project_skills", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "project_id"
+    t.uuid "skill_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_project_skills_on_project_id"
+    t.index ["skill_id"], name: "index_project_skills_on_skill_id"
   end
 
   create_table "projects", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -54,6 +69,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_01_131949) do
     t.string "education"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.uuid "user_id"
+    t.index ["user_id"], name: "index_user_profiles_on_user_id"
   end
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -65,4 +82,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_01_131949) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "comments", "posts"
+  add_foreign_key "likes", "posts"
+  add_foreign_key "posts", "users"
+  add_foreign_key "project_skills", "projects"
+  add_foreign_key "project_skills", "skills"
+  add_foreign_key "user_profiles", "users"
 end
