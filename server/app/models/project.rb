@@ -3,5 +3,6 @@ class Project < ApplicationRecord
     validates :des, presence: true, length: {maximum: 70}
     validates :url, presence: true
 
-    has_and_belongs_to_many :skills
+    has_many :project_skills
+    has_many :skills, through: :project_skills
 end
