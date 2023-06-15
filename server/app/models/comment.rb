@@ -1,5 +1,5 @@
 class Comment < ApplicationRecord
     validates :content, presence: true
 
-    belong_to :project
+    belongs_to :post
 end
