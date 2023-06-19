@@ -2,10 +2,11 @@ require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
   before(:each) do
-    @first_comment = Comment.new(content: 'mikbensondcndjncvk')
+    @post = Post.new(content: 'mike benson',image: 'profile.png')
+    @first_comment = Comment.new(content: 'mikbensondcndjncvk',post: @post)
   end
 
-  context 'Comment model validations' do
+  context 'Model validations' do
     it 'is valid with valid attributes' do
       expect(@first_comment).to be_valid
     end
