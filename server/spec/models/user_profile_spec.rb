@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe UserProfile, type: :model do
   before(:each) do
-    @first_userprofile = UserProfile.new(headline: 'headline1', summary: 'egxdmikebenson', education: 'school1')
+    @first_user = User.new(name: 'mike benson', email: 'mike@benson', password: 'password', profile_pic: 'profile.png')
+    @first_userprofile = UserProfile.new(headline: 'headline1', summary: 'egxdmikebenson', education: 'school1',user:@first_user)
   end
 
   context 'UserProfile model validations' do
