@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import CardSliceReducer from './cardSlice';
+import PostSliceReducer from './cardSlice';
+import GroupSliceReducer from './GroupSlice';
 
 const store = configureStore({
   reducer: {
-    card: CardSliceReducer,
+    posts: PostSliceReducer,
+    groups: GroupSliceReducer,
   },
 });
 
